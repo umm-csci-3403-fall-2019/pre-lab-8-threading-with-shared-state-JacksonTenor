@@ -69,7 +69,7 @@ public class ThreadedSearch<T> implements Searcher<T>, Runnable {
     public void run() {
         //Loop through the values until someone finds it or we get through all of our numbers.
         for(int i=begin; i<end; i++){
-            if(list.get(i) == target){
+            if(list.get(i).equals(target)){
                 answer.setAnswer(true);
                 return;
             }
